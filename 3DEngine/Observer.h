@@ -29,7 +29,7 @@ private:
 
 	std::vector<SpherePoint*> *usedPixels = new std::vector<SpherePoint*>();
 
-	Gdiplus::Color* col = new Gdiplus::Color(0, 0, 0);
+	Gdiplus::Color* col = new Gdiplus::Color(255, 50, 0);
 	Gdiplus::Bitmap * image = new Gdiplus::Bitmap(L"BITMAP2.bmp");
 
 	int diameter;

@@ -69,7 +69,7 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, PSTR, INT iCmdShow)
     float j = 0;
     for (int x = 0; x < masterpieceBitmap.GetWidth();x++)
     {
-        j += 0.1;
+        j += 0.3;
         for (int y = 0; y < masterpieceBitmap.GetHeight(); y++)
         {
             masterpieceBitmap.GetPixel(x, y, &black);
@@ -78,7 +78,7 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, PSTR, INT iCmdShow)
                 ThreeDObject::ThreeDPixel pix;
                     pix.X = (-x*4)+300;
                     pix.Y = (-y*4) + 100;
-                    pix.Z = 300;
+                    pix.Z = cos(j)*10 + 300;
                     pix.Brightness = 10;
                     box->AddPixel(pix);
                 
@@ -171,6 +171,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,
     {
         
         graphics->Clear(*white);
-        graphics->DrawImage(observer->GetImage(), 60, 10);
+        graphics->DrawImage(observer->GetImage(), 200, 10);
     }
 
